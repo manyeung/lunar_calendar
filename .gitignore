@@ -1,0 +1,7 @@
+html
+out
+tmp
+
+__pycache__
+
+myenv
