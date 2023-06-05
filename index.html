@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>公曆與農曆對照表</title>
+    <style>
+        ul.years {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul.years li {
+            flex: 0 0 100px;
+            padding: 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <p>以天文台的公曆與農曆對照表(文字版)製作了HTML版</p>
+    <p>資料來源: 
+        <ol>
+            <li>
+                <a href="https://www.hko.gov.hk/tc/gts/time/conversion1_text.htm">https://www.hko.gov.hk/tc/gts/time/conversion1_text.htm</a>
+            </li>
+            <li>
+                <a href="https://www.hko.gov.hk/tc/gts/time/conversion.htm">https://www.hko.gov.hk/tc/gts/time/conversion.htm</a>
+            </li>
+        </ol>
+    </p>
+    <p>From 1901 to 2100</p>
+    <ul class="years">{LIST}</ul>
+</body>
+</html>

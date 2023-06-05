@@ -3,7 +3,7 @@ import os
 import shutil
 import json
 import datetime
-from config import JSON_DIR, HTML_DIR, TEMPLATE_PATH
+from config import JSON_DIR, HTML_DIR, TEMPLATE_PATH, INDEX_PATH
 from log import log
 
 def makeTable(list: list):
@@ -77,3 +77,20 @@ def html():
         with open(fileHtml, 'w', encoding='utf-8') as f:
             f.write(html)
             log('Wrote %s' % fileHtml)
+
+def make_index():
+    if not os.path.exists(HTML_DIR):
+        os.mkdir(HTML_DIR)
+
+    list = ''
+    for y in range(1901, 2101):
+        list += '<li><a href="%s.html">%s</a></li>' % (y, y)
+
+    f = open(INDEX_PATH, 'r')
+    template = f.read()
+    f.close()
+
+    html = template.replace('{LIST}', list)
+
+    with open('%s/index.html' % HTML_DIR, 'w', encoding='utf-8') as f:
+        f.write(html)

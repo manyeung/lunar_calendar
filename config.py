@@ -5,3 +5,4 @@ TEMP_DIR = 'tmp'
 HTML_DIR = 'html'
 
 TEMPLATE_PATH = 'template.html'
+INDEX_PATH = 'index.html'
