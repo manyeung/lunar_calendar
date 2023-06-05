@@ -94,3 +94,4 @@ def make_index():
 
     with open('%s/index.html' % HTML_DIR, 'w', encoding='utf-8') as f:
         f.write(html)
+        log('Wrote index.html')
